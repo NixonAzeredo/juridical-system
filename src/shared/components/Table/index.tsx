@@ -80,7 +80,7 @@ function Table<T>({
                   </td>
                   <td>{indexer.nome}</td>
                   <td></td>
-                  <td className="float-right">
+                  <td className="text-right">
                     <Dropdown
                       openModalAlert={(state) =>
                         changeStateOfModalAlert(state, indexer.id)
