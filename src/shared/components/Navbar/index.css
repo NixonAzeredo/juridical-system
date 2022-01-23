@@ -1,0 +1,6 @@
+#search::placeholder {
+  color: #fff;
+}
+#search:focus::placeholder {
+  color: #404040;
+}
