@@ -70,7 +70,7 @@ function Navbar() {
       <div className="flex-none">
         <div className="avatar">
           <div className="rounded-full w-10 h-10 m-1">
-            <img src="https://i.pravatar.cc/500?img=32" />
+            <img src="https://i.pravatar.cc/500?img=32" alt="avatar" />
           </div>
         </div>
       </div>
