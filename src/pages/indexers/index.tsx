@@ -20,7 +20,6 @@ function Indexers() {
   const loadMore = async () => {
     setLoadMoreIndexers(true);
     const apiService = new ApiService();
-    console.log(page);
     const {
       data: { data },
     } = await apiService.getMany({ page });
@@ -67,17 +66,6 @@ function Indexers() {
     const apiService = new ApiService();
     await apiService.createOne(indexer);
     setIndexers([
-      ...indexers,
-      {
-        simbolo: indexer.symbol,
-        nome: indexer.name,
-        dataAlteracao: null,
-        dataCadastro: new Date().toISOString(),
-        id: indexers.length + 1,
-      },
-    ]);
-
-    console.log([
       ...indexers,
       {
         simbolo: indexer.symbol,

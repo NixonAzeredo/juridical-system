@@ -36,7 +36,6 @@ function Table<T>({
   };
 
   const sendUpdateIndexer = (data: { name: string; symbol: string }) => {
-    console.log(data);
     changeStateOfModal(false);
     updateIndexer({ ...data, id: idIndexer });
   };
