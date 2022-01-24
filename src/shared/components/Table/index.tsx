@@ -41,7 +41,7 @@ function Table<T>({
   };
 
   const closeModal = () => {
-    changeStateOfModal(false);
+    setIsOpenModal(false);
   };
 
   return (

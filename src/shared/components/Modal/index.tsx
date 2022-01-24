@@ -11,6 +11,7 @@ function Modal({ isOpen = false, changeState, sendFormToUpdate }: ModalProp) {
     register,
     handleSubmit,
     reset,
+    clearErrors,
     formState: { errors },
   } = useForm();
   const onSubmit = (data: any) => {
@@ -23,6 +24,11 @@ function Modal({ isOpen = false, changeState, sendFormToUpdate }: ModalProp) {
 
   const cancelUpdate = () => {
     changeState(false);
+    reset({
+      name: "",
+      symbol: "",
+    });
+    clearErrors(["name", "symbol"]);
   };
 
   return (
@@ -112,7 +118,11 @@ function Modal({ isOpen = false, changeState, sendFormToUpdate }: ModalProp) {
           </div>
 
           <div className="modal-action">
-            <button onClick={cancelUpdate} className="btn btn-ghost">
+            <button
+              type="button"
+              onClick={cancelUpdate}
+              className="btn btn-ghost"
+            >
               Fechar
             </button>
             <button
