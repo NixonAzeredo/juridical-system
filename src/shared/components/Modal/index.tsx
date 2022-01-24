@@ -11,7 +11,6 @@ function Modal({ isOpen = false, changeState, sendFormToUpdate }: ModalProp) {
     register,
     handleSubmit,
     reset,
-    clearErrors,
     formState: { errors },
   } = useForm();
   const onSubmit = (data: any) => {
@@ -24,7 +23,6 @@ function Modal({ isOpen = false, changeState, sendFormToUpdate }: ModalProp) {
 
   const cancelUpdate = () => {
     changeState(false);
-    clearErrors(["name", "symbol"]);
   };
 
   return (
