@@ -32,10 +32,12 @@ function SubPanel({ title, sendSearch, sendCreate }: SubPanelProps) {
         changeState={changeStateOfModal}
         sendFormToUpdate={sendDataForCreateIndexer}
       />
-      <div className="flex items-center justify-between">
-        <div className="flex items-center">
+      <div className="grid grid-cols-13">
+        <div className="col-start-1 col-end-13 sm:col-start-1 sm:col-end-2 flex items-center">
           <h1 className="md:text-3xl font-bold">{title}</h1>
-          <div className="form-control ml-5">
+        </div>
+        <div className="col-start-1 col-end-6 mt-2 sm:mt-0 sm:col-start-2 sm:col-end-6 flex items-center">
+          <div className="form-control">
             <div className="relative">
               <input
                 onChange={(e) => setSearch(e.target.value)}
@@ -52,7 +54,7 @@ function SubPanel({ title, sendSearch, sendCreate }: SubPanelProps) {
             </div>
           </div>
         </div>
-        <div>
+        <div className="col-start-6 mt-2 ml-2 sm:ml-0 sm:mt-0 sm:col-start-6 text-right">
           <button
             onClick={() => changeStateOfModal(true)}
             className="btn btn-ghost bg-blue-600 hover:bg-blue-500"
